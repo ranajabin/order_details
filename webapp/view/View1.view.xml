@@ -1,0 +1,99 @@
+<mvc:View controllerName="navigationandrouting.navigationandroutingproject1.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <!--<Text text = "WELCOME TO FIRST PAGE"></Text> -->
+
+            <Table headerText="Orders:-" items="{/orders}" id="tab">
+                <columns>
+                    <Column>
+                        <Text text="Order Id" />
+                    </Column>
+
+                    <Column>
+                        <Text text="Cusotomer Id" />
+                    </Column>
+
+                    <Column>
+                        <Text text="Employee Id" />
+                    </Column>
+
+                    <Column>
+                        <Text text="Order Date" />
+                    </Column>
+
+                    <Column>
+                        <Text text="Required Date" />
+                    </Column>
+
+                    <Column>
+                        <Text text="Shipped Date" />
+                    </Column>
+
+                    <Column>
+                        <Text text="Ship Via" />
+                    </Column>
+
+                    <Column>
+                        <Text text="Freight" />
+                    </Column>
+
+                    <Column>
+                        <Text text="Ship Name" />
+                    </Column>
+
+                    <Column>
+                        <Text text="Ship Address" />
+                    </Column>
+
+                    <Column>
+                        <Text text="Ship City" />
+                    </Column>
+
+                    <Column>
+                        <Text text="Ship Region" />
+                    </Column>
+
+                    <Column>
+                        <Text text="Ship Postal Code" />
+                    </Column>
+
+                    <Column>
+                        <Text text="Ship Country" />
+                    </Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem type="Active" id="col1">
+                        <cells>
+                            <!-- <Button type="Emphasized" text="{OrderID}" press="onClick" />  -->
+
+                            <Link text="{OrderID}" press="onClick" />
+                            <Text id="txt2" text="{CustomerID}" />
+                            <Text id="txt3" text="{EmployeeID}" />
+                            <Text id="txt4" text="{OrderDate}" />
+                            <Text id="txt5" text="{RequiredDate}" />
+                            <Text id="txt6" text="{ShippedDate}" />
+                            <Text id="txt7" text="{ShipVia}" />
+                            <Text id="txt8" text="{Freight}" />
+                            <Text id="txt9" text="{ShipName}" />
+                            <Text id="txt10" text="{ShipAddress}" />
+                            <Text id="txt11" text="{ShipCity}" />
+                            <Text id="txt12" text="{ShipRegion}" />
+                            <Text id="txt13" text="{ShipPostalCode}" />
+                            <Text id="txt14" text="{ShipCountry}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+
+        <footer>
+            <Bar design="Footer">
+                <contentRight>
+                    <!--  <Button text="View2" press="onClick"  type="Emphasized"/>  -->
+                    <Text text=" Check your all order details here!!!" />
+                </contentRight>
+            </Bar>
+        </footer>
+    </Page>
+</mvc:View>

@@ -1,0 +1,100 @@
+<mvc:View controllerName="navigationandrouting.navigationandroutingproject1.controller.View2" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+    <Page id="page" title="Order Details Form" showNavButton="true" navButtonPress="onNavBack">
+
+        <IconTabBar id="idIconTabBarMulti" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
+            <items>
+                <IconTabFilter icon="sap-icon://list" key="people">
+                    <Text text="Your Order Details..." />
+                </IconTabFilter>
+            </items>
+        </IconTabBar>
+
+        <content>
+            <VBox fitContainer="true" justifyContent="Center" alignItems="Center" alignContent="Center" backgroundDesign="Solid">
+                <items>
+                    <Panel id="orderdetails" headerText="" class="sapUiResponsiveMargin" width="auto">
+                        <f:SimpleForm
+                            id="SimpleForm"
+                            backgroundDesign="Translucent"
+                            editable="true"
+                            layout="ResponsiveGridLayout"
+                            title="Order Record:"
+                            labelSpanXL="4"
+                            labelSpanL="4"
+                            labelSpanM="12"
+                            labelSpanS="12"
+                            adjustLabelSpan="false"
+                            emptySpanXL="0"
+                            emptySpanL="0"
+                            emptySpanM="0"
+                            emptySpanS="0"
+                            columnsXL="2"
+                            columnsL="2"
+                            columnsM="2"
+                            width="100%"
+                            singleContainerFullSize="false">
+                       
+                            <f:content>
+                                <core:Title text="" />
+                                <Label text="Order Id" />
+                                <Input value="{array2>/0/OrderID}" width="80%" />
+
+                                <Label text="Customer Id" />
+                                <Input value="{array2>/0/CustomerID}" width="80%" />
+
+                                <Label text="Employee Id" />
+                                <Input value="{=${array2>/0/EmployeeID} > 3 ? 'Success' : 'Error'}" width="80%" />
+
+                                <Label text="Order Date" />
+                                <!--			<Input value="{array2>/0/OrderDate}"/>  -->
+                                <DatePicker value="{array2>/0/OrderDate}" width="80%" />
+
+                                <Label text="Required Date" />
+                                <!--	<Input value="{array2>/0/RequiredDate}"/>  -->
+                                <DatePicker value="{array2>/0/RequiredDate}" width="80%" />
+
+                                <Label text="Shipped Date" />
+                                <!--		<Input value="{array2>/0/ShippedDate}"/>  -->
+                                <DatePicker value="{array2>/0/ShippedDate}" width="80%" />
+
+                                <Label text="Ship Via" />
+                                <Input value="{array2>/0/ShipVia}" width="80%" />
+
+                                <core:Title text="" />
+
+                                <Label text="Freight" />
+                                <Input value="{array2>/0/Freight}" width="80%" />
+
+                                <Label text="Ship Name" />
+                                <Input value="{array2>/0/ShipName}" width="80%" />
+
+                                <Label text="Ship Address" />
+                                <Input value="{array2>/0/ShipAddress}" width="80%" />
+
+                                <Label text="Ship City" />
+                                <Input value="{array2>/0/ShipCity}" width="80%" />
+
+                                <Label text="Ship Region" />
+                                <Input value="{array2>/0/ShipRegion}" width="80%" />
+
+                                <Label text="Ship Postal Code" />
+                                <Input value="{array2>/0/ShipPostalCode}" width="80%" />
+
+                                <Label text="Ship Country" />
+                                <Input value="{array2>/0/ShipCountry}" width="80%" />
+                            </f:content>
+                        </f:SimpleForm>
+                    </Panel>
+                </items>
+            </VBox>
+        </content>
+
+        <footer>
+            <Bar design="Footer">
+                <contentRight>
+                    <Button text="Confirm your Order" press="onPress" type="Emphasized" />
+                </contentRight>
+            </Bar>
+        </footer>
+    </Page>
+</mvc:View>
